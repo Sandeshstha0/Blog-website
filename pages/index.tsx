@@ -13,6 +13,7 @@ const Home: NextPage = () => {
                 />
                 <link rel="icon" href="/favicon.ico" />
         </Head>
+        
    <main>
     <h1 className='text-primary-900'>Welcome to Code Blog!</h1>
    </main>
