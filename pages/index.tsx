@@ -1,9 +1,10 @@
-import { AxiosResponse } from "axios";
-import { fetchCategories } from "@/http";
-
-import { ICategory, ICollectionResponse } from "@/types";
+import { AxiosResponse } from 'axios';
 import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
+import { fetchCategories } from "@/http";
+import { ICategory, ICollectionResponse } from "@/types";
+
+
 
 const Home: NextPage = () => {
   return (
@@ -15,24 +16,23 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1 className="text-primary-900">Welcome to Code Blog!</h1>
+        <h1 className="text-primary-900">Welcome to Edxplore!</h1>
       </main>
     </div>
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  //categories
+export const getServerSideProps: GetServerSideProps = async  () => {
+  // categories
   const {
     data: categories,
 }: AxiosResponse<ICollectionResponse<ICategory[]>> =
     await fetchCategories();
 
-
-  return {
+return {
     props: {
-      categories: {
-        items: categories.data,
+        categories: {
+            items: categories.data,
       },
     },
   };

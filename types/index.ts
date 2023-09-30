@@ -10,6 +10,8 @@ export interface ICategoryAttribute {
 export interface IPagination {
   page: number;
   pageSize: number;
+  pageCount: number;
+  total: number;
 }
 export interface IResourceMeta {
   pagination: IPagination;
