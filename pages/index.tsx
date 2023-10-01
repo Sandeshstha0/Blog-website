@@ -5,16 +5,16 @@ import { fetchArticles, fetchCategories } from "@/http";
 import { IArticle, ICategory, ICollectionResponse, IPagination } from "@/types";
 import Tabs from "@/components/Tabs";
 import ArticleList from "@/components/ArticleList";
-import qs from 'qs';
+import qs from "qs";
 
 interface IPropTypes {
   categories: {
     items: ICategory[];
   };
-  articles:{
-    items:IArticle[];
-    pagination:IPagination;
-  }
+  articles: {
+    items: IArticle[];
+    pagination: IPagination;
+  };
 }
 
 const Home: NextPage<IPropTypes> = ({ categories, articles }) => {
@@ -34,12 +34,14 @@ const Home: NextPage<IPropTypes> = ({ categories, articles }) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   //Article
-  const options ={
-    populate:['author.avatar'],
-    sort:['id:desc'],
-  }
+  const options = {
+    populate: ["author.avatar"],
+    sort: ["id:desc"],
+  };
+
+  const queryString=qs.stringify(options);
   const { data: articles }: AxiosResponse<ICollectionResponse<IArticle[]>> =
-    await fetchArticles();
+    await fetchArticles(queryString);
 
   // categories
   const { data: categories }: AxiosResponse<ICollectionResponse<ICategory[]>> =

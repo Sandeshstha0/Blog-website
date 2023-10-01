@@ -18,9 +18,10 @@ const Blogcard = ({ article }: IPropType) => {
         <div>
           <img
             src={`${process.env.API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`}
-          />
-          height={40}
-          width={40}
+            height={40}
+            width={40}
+            />
+          
         </div>
         <span className="text-sm font-bold text-gray-600">
             {article.attributes.author.data.attributes.firstname}{''}
