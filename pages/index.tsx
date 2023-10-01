@@ -3,8 +3,17 @@ import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { fetchCategories } from "@/http";
 import { ICategory, ICollectionResponse } from "@/types";
+import Tabs from "@/components/Tabs";
 
-const Home: NextPage = () => {
+interface IPropTypes{
+  categories:{
+    items:ICategory[];
+  }
+}
+
+
+const Home: NextPage<IPropTypes> = ({categories}) => {
+  
   return (
     <div>
       <Head>
@@ -13,9 +22,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className="text-primary-900">Welcome to Edxplore!</h1>
-      </main>
+      <Tabs categories={categories.items}/>
+      {/*Articles*/}
+    
     </div>
   );
 };
