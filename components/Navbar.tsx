@@ -15,7 +15,7 @@ function Navbar() {
             </Link>
       <ul className="flex item-center">
         <li className="mr-6 font-medium text-gray-600">
-          <a href="#">Services</a>
+          <a href="/">Home</a>
         </li>
         <li className="mr-6 font-medium text-gray-600">
           <a href="#">Pricing</a>
