@@ -13,7 +13,7 @@ function Navbar() {
                     </span>
                 </div>
             </Link>
-      <ul className="flex item-center">
+      <ul className="flex item-center ">
         <li className="mr-6 font-medium text-gray-600">
           <a href="/">Home</a>
         </li>

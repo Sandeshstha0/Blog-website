@@ -31,6 +31,10 @@ const Blogcard = ({ article }: IPropType) => {
           <span className="=text-gray-400">{formatDate(article.attributes.createdAt)}</span>
         </span>
       </div>
+      <div className="text-gray-500">
+                {article.attributes.shortDescription.slice(0, 250)}{' '}
+                {article.attributes.shortDescription.length > 250 ? '...' : ''}
+            </div>
     </div>
   );
 };
