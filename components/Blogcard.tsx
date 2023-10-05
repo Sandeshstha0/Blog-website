@@ -24,19 +24,20 @@ const Blogcard = ({ article }: IPropType) => {
           />
         </div>
         <span className="text-sm font-bold text-gray-600">
-          {article.attributes.author.data.attributes.firstname}
-          {" "}
-          {article.attributes.author.data.attributes.lastname} on 
-          &nbsp;
-          <span className="=text-gray-400">{formatDate(article.attributes.createdAt)}</span>
-        </span>
-      </div>
-      <div className="text-gray-500">
+                    {article.attributes.author.data.attributes.firstname}{' '}
+                    {article.attributes.author.data.attributes.lastname} on
+                    &nbsp;
+                    <span className="text-gray-400">
+                        {formatDate(article.attributes.createdAt)}
+                    </span>
+                </span>
+            </div>
+            <div className="text-gray-500">
                 {article.attributes.shortDescription.slice(0, 250)}{' '}
                 {article.attributes.shortDescription.length > 250 ? '...' : ''}
             </div>
-    </div>
-  );
+        </div>
+    );
 };
 
 export default Blogcard;

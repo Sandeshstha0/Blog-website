@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -13,9 +14,10 @@ const BlogCardWithImage = ({ article }: IPropType) => {
                     {article.attributes.Title}
                 </span>
             </Link>
-            <img src="/gitbook.svg" width={140} height={140} />
+            <Image src="/gitbook.svg" width={140} height={140} alt='' />
         </div>
     );
 };
 
 export default BlogCardWithImage;
+

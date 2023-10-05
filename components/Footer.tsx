@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="text-gray-600 mt-12 fixed bottom-0 left-0 bg-white w-full">
+    <footer className="text-gray-600 mt-14npm fixed bottom-0 left-0 bg-white w-full">
     <div className="container mx-auto flex items-center flex-col sm:flex-row py-8">
         <a
             href="/"
