@@ -7,7 +7,7 @@ function Navbar() {
     <nav className="flex item-center justify-between py-6">
     <Link href="/">
         <div className="flex items-center cursor-pointer">
-            <img src="/logo.png" height={35} width={40}  />
+            <img src="/logo.jpg" height={35} width={40}  />
             <span className="font-bold ml-2 text-primary">
                         Edxplore
                     </span>

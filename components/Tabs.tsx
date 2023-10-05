@@ -5,6 +5,7 @@ import React from "react";
 
 interface IPropType {
   categories: ICategory[];
+  handleOnSearch: (query: string) => void;
 }
 
 const Tabs = ({ categories }: IPropType) => {
