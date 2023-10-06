@@ -57,13 +57,13 @@ const Home: NextPage<IPropTypes> = ({ categories, articles }) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  //Article
+  // Articles
   const options: Partial<IQueryOptions> = {
     populate: ["author.avatar"],
     sort: ["id:desc"],
     pagination: {
       page: query.page ? +query.page : 1,
-      pageSize: 25,
+      pageSize: 4,
     },
   };
 
@@ -76,6 +76,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   }
 
   const queryString = qs.stringify(options);
+
   const { data: articles }: AxiosResponse<ICollectionResponse<IArticle[]>> =
     await fetchArticles(queryString);
 

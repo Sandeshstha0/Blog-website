@@ -15,16 +15,16 @@ function Navbar() {
             </Link>
             <ul className="flex items-center">
                 <li className="mr-6 font-medium text-gray-600">
-                    <a href="#">Products</a>
+                    <a href="/">Home</a>
                 </li>
                 <li className="mr-6 font-medium text-gray-600">
-                    <a href="#">pricing</a>
+                    <a href="#">Services</a>
                 </li>
                 <li className="mr-6 font-medium text-gray-600">
-                    <a href="#">Docs</a>
+                    <a href="#">Carrer</a>
                 </li>
                 <li className="mr-6 font-medium text-gray-600">
-                    <a href="#">Company</a>
+                    <a href="#">About</a>
                 </li>
             </ul>
             <ul className="flex items-center">
